@@ -668,7 +668,9 @@
             margin-top: 40px;
         }
 
-        .footer-top { padding: 60px 0; }
+        .footer-top { 
+            padding: 60px 0; 
+        }
 
         .footer-grid {
             display: grid;
@@ -682,17 +684,41 @@
             color: var(--white);
         }
 
-        .footer-brand .brand-row { display:flex; gap:14px; align-items:center; }
+        .footer-brand .brand-row { 
+            display:flex; 
+            gap:1px; 
+            align-items:center;
+        }
 
-        .footer-logo-img { width:80px; height:60px; border-radius:10px; }
+        .footer-logo-img {
+            height:60px; 
+            border-radius:10px; 
+        }
 
-        .footer-logo { font-size:1.6rem; font-weight:700; color:var(--white); }
+        .footer-logo {
+            font-size:1.6rem;
+            font-weight:700; 
+            color:var(--white); 
+        }
 
-        .footer-desc { margin:14px 0 18px; color:#c9d6d8; line-height:1.6; max-width:360px; }
+
+        .footer-desc { 
+            margin:14px 0 18px;
+            color:#c9d6d8;
+            line-height:1.6; 
+            max-width:360px; 
+        }
+
+.footer-links{
+    margin-left: -30px;
+}
 
         .footer-title { font-size:1.02rem; color:var(--white    ); margin-bottom:12px; }
 
-        .footer-links ul { list-style:none; padding:0; }
+        .footer-links ul {
+            list-style:none; 
+            padding:0; 
+        }
 
         .footer-links ul li { margin-bottom:10px; }
 
@@ -746,3 +772,52 @@
             .newsletter-form { flex-direction:column; }
             .newsletter-btn { width:100%; }
         }
+
+        /* Footer Grid Layout - Newsletter di kiri */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: 
+        "brand links contact"
+        "newsletter links contact";
+    gap: 30px;
+    align-items: start;
+}
+
+.footer-brand {
+    grid-area: brand;
+}
+
+.footer-newsletter {
+    grid-area: newsletter;
+}
+
+.footer-links {
+    grid-area: links;
+}
+
+.footer-contact {
+    grid-area: contact;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "brand brand"
+            "newsletter newsletter"
+            "links contact";
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "brand"
+            "newsletter"
+            "links"
+            "contact";
+    }
+}
