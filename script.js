@@ -1,10 +1,46 @@
-        // Mobile Menu Toggle
+       // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navMenu = document.querySelector('.nav-menu');
         
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
+
+        // Active Link Highlighting on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 80; // sesuaikan offset navbar
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+
+        // Navbar scroll effect
+        const navbar = document.querySelector('.navbar');
+        function handleNavbarScroll() {
+            if (window.scrollY > 40) {
+                navbar.classList.remove('navbar-transparent');
+            } else {
+                navbar.classList.add('navbar-transparent');
+            }
+        }
+        window.addEventListener('scroll', handleNavbarScroll);
+        window.addEventListener('DOMContentLoaded', handleNavbarScroll);
         
         // Donation Options Selection
         const donationOptions = document.querySelectorAll('.donation-option');
