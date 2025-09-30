@@ -194,7 +194,7 @@
         }
 
         .nav-link.active {
-        color: var(--primary) !important; /* warna teks primary */
+        color: var(--primary) !important;
         position: relative;
         }
 
@@ -239,7 +239,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('hero.png') center center/cover no-repeat;
+    background: url('/asset/hero.png') center center/cover no-repeat;
     z-index: 2;
 }
 
@@ -258,10 +258,10 @@
     position: relative;
     z-index: 3;
     max-width: 800px;
-    margin: 0 auto; /* tengah horizontal */
-    text-align: center; /* teks juga di tengah */
+    margin: 0 auto;
+    text-align: center;
     color: #fff;
-    padding: 120px 60px 150px 60px; /* hilangkan padding kiri besar */
+    padding: 120px 60px 150px 60px;
     background: none;
     border-radius: 0;
 }
@@ -312,7 +312,8 @@
             display: flex;
             align-items: center;
             gap: 50px;
-            margin-top: -80px;
+            margin-top: -30px;
+            margin-bottom: 50px;
         }
 
         .about-images {
@@ -320,12 +321,19 @@
             position: relative;
         }
 
-        .main-image {
-            width: 500px;
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
+.main-image img {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-content .btn {
+    font-size: 1.1rem;   
+    padding: 8px 28px;  
+    border-radius: 8px; 
+    font-weight: 600;
+}
 
 
         .about-content {
@@ -345,12 +353,12 @@
             font-size: 2.5rem;
         }
 
-        /* Stats Section */
+/* Stats */
 .stats {
     background-color: var(--primary);
     color: var(--white);
     margin-top: -50px;
-    padding: 80px 0; /* beri ruang atas-bawah */
+    padding: 10px 0;
 }
 
 .stats-container {
@@ -358,34 +366,107 @@
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    gap: 40px; /* jarak antar stat-item */
+    gap: 0;
 }
 
 .stat-item {
     padding: 30px 20px;
     flex: 1;
     min-width: 220px;
-    background: rgba(255, 255, 255, 0.05); /* subtle card effect */
-    border-radius: 15px;
-    transition: transform 0.3s, background 0.3s;
+    position: relative;
+    transition: transform 0.3s;
 }
 
-.stat-item:hover {
-    transform: translateY(-10px); /* efek hover naik */
-    background: rgba(255, 255, 255, 0.15); /* highlight saat hover */
+/* Garis pemisah antar item */
+.stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: 0;
+    height: 60%;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Warna teks bergantian */
+.stat-item:nth-child(1) .stat-number,
+.stat-item:nth-child(1) .stat-text {
+    color: var(--secondary); /* Kuning untuk item 1 */
+}
+
+.stat-item:nth-child(2) .stat-number,
+.stat-item:nth-child(2) .stat-text {
+    color: var(--white); /* Putih untuk item 2 */
+}
+
+.stat-item:nth-child(3) .stat-number,
+.stat-item:nth-child(3) .stat-text {
+    color: var(--secondary); /* Kuning untuk item 3 */
+}
+
+.stat-item:nth-child(4) .stat-number,
+.stat-item:nth-child(4) .stat-text {
+    color: var(--white); /* Putih untuk item 4 */
 }
 
 .stat-number {
-    font-size: 3rem; /* lebih besar */
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 15px;
     font-family: 'Poppins', sans-serif;
+    transform: translateX(5px);
 }
 
 .stat-text {
     font-size: 1.2rem;
     letter-spacing: 0.5px;
     font-weight: 500;
+}
+
+.stat-item:not(:last-child) {
+    padding-right: 40px; /* jarak ekstra biar teks nggak dempet garis */
+}
+
+/* Responsive untuk tablet */
+@media (max-width: 1024px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-item:nth-child(2)::after {
+        display: none;
+    }
+    
+    .stat-item:nth-child(odd) {
+        border-right: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+    .stats-container {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        min-width: 100%;
+    }
+    
+    .stat-item:not(:last-child)::after {
+        display: none;
+    }
+    
+    .stat-item:not(:last-child) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .stat-text {
+        font-size: 1.1rem;
+    }
 }
 
 
@@ -411,40 +492,109 @@
             color: var(--white);
         }
 
-        .donation-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-bottom: 40px;
-        }
+.donation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
 
-        .donation-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
+.donation-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .donation-card:hover {
-            transform: translateY(-5px);
-        }
+.donation-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
 
-        .card-image {
-            height: 190px;
-            overflow: hidden;
-        }
+/* Card Image */
+.donation-card .card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
 
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
+/* Card Content */
+.donation-card .card-content {
+    padding: 20px;
+}
 
-        .donation-card:hover .card-image img {
-            transform: scale(1.05);
-        }
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* Profile */
+.card-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-profile .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Progress */
+.progress-container {
+    margin-bottom: 15px;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-value {
+    height: 100%;
+    width: 0;
+    background: var(--primary, #00a86b);
+    border-radius: 5px;
+    transition: width 1s ease;
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card-actions .action-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-actions .action-btn:hover {
+    color: var(--primary, #00a86b);
+}
+
 
         .card-content {
             padding: 20px;
@@ -527,44 +677,143 @@
             margin-top: 30px;
         }
 
-        /* Stories Section */
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
+.text-center {
+    margin-top: 50px;
+}
 
-        .story-card {
-            background-color: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
+/* Tombol Donasi pada Card */
+.btn-donate {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
 
-        .story-image {
-            height: 200px;
-        }
+.btn-donate:hover {
+    background-color: #445529;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(85, 107, 47, 0.3);
+}
 
-        .story-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+/* Penyesuaian layout card untuk menampung tombol donasi */
+.donation-card .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
 
-        .story-content {
-            padding: 20px;
-        }
+.card-actions {
+    margin-top: auto;
+}
 
-        .story-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
+/* Stories Section */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stories h2 {
+    margin-bottom: 10px;
+}
+
+.stories p.text-center {
+    margin-top: 0;      
+    margin-bottom: 25px; 
+}
+
+.stories p{
+    color: var(--text);
+}
+.story-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.story-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.story-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.story-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.story-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.story-content p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.read-more:hover {
+    color: var(--primary);
+}
+
+.story-footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #222;
+    border-top: 2px solid #000;
+    padding-top: 10px;
+}
+
+.story-footer .story-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
 
         .view-more {
             text-align: center;
             margin-top: 40px;
         }
+
+.story-card span {
+    color: rgba(133, 133, 133, 0.6);
+    font-size: 0.8rem;
+}
 
         /* How It Works */
         .steps {
@@ -572,6 +821,7 @@
             justify-content: space-between;
             position: relative;
             margin-top: 50px;
+            margin-bottom: 50px;
         }
 
         .steps::before {
@@ -610,6 +860,14 @@
         .step-title {
             font-size: 1.2rem;
             margin-bottom: 10px;
+        }
+
+        .how-it-works p{
+            margin-top: 10px;
+        }
+
+        .how-it-works h2{
+            margin-left: 10px;
         }
 
         /* Join Us Banner */
