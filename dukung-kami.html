@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dukung Kami - Sehati</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="logo-img">
+                <span class="navbar-logo-text">Sehati</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link">Telusuri Donasi</a></li>
+                <li class="nav-item"><a href="dukung-kami.html" class="nav-link active">Dukung Kami</a></li>
+                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
+                <div class="nav-auth">
+                    <a href="#login" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Masuk
+                    </a>
+                    <a href="#register" class="btn-auth btn-register">
+                        <i class="fas fa-user-plus"></i>
+                        Daftar
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="support-hero">
+        <div class="support-hero-bg">
+            <div class="support-hero-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=2000" alt="Orang saling membantu" class="support-hero-image">
+        </div>
+        <div class="container support-hero-content">
+            <h1 class="support-hero-title" data-aos="fade-up">Mari Dukung Perjalanan Kebaikan Bersama Kami</h1>
+            <p class="support-hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                Dukung Sehati agar terus bisa menyalurkan bantuan dengan aman, transparan, dan berdampak.
+            </p>
+            <div class="support-hero-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="#donasi" class="btn-hero btn-hero-primary">
+                    <i class="fas fa-gift"></i>
+                    Donasi Sekarang
+                </a>
+                <a href="#relawan" class="btn-hero btn-hero-secondary">
+                    <i class="fas fa-hands-helping"></i>
+                    Jadi Relawan
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Section: Donasi Uang -->
+    <section class="donation-section" id="donasi">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Donasi Uang</h2>
+                <p>Setiap rupiah yang Anda berikan akan membantu kami terus beroperasi dan menyalurkan bantuan</p>
+            </div>
+
+            <div class="donation-form-card" data-aos="fade-up" data-aos-delay="100">
+                <!-- Progress Bar -->
+                <div class="donation-progress-wrapper">
+                    <div class="donation-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Terkumpul</span>
+                            <span class="stat-value" id="collected-amount">Rp 16.250.000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Target</span>
+                            <span class="stat-value">Rp 25.000.000</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-progress="65"></div>
+                    </div>
+                    <p class="progress-text"><strong>65%</strong> dari target tercapai</p>
+                </div>
+
+                <!-- Toggle Donasi -->
+                <div class="donation-toggle">
+                    <button class="toggle-btn active" data-type="once">Donasi Sekali</button>
+                    <button class="toggle-btn" data-type="monthly">Donasi Bulanan</button>
+                </div>
+
+                <!-- Nominal Options -->
+                <div class="donation-amounts">
+                    <button class="amount-btn" data-amount="50000">Rp 50.000</button>
+                    <button class="amount-btn" data-amount="100000">Rp 100.000</button>
+                    <button class="amount-btn" data-amount="200000">Rp 200.000</button>
+                    <button class="amount-btn" data-amount="500000">Rp 500.000</button>
+                </div>
+
+                <!-- Custom Input -->
+                <div class="custom-amount">
+                    <label for="custom-input">Atau masukkan nominal lain:</label>
+                    <div class="custom-input-wrapper">
+                        <span class="currency-prefix">Rp</span>
+                        <input type="text" id="custom-input" placeholder="0" class="custom-input-field">
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <button class="btn-donate-now">
+                    <i class="fas fa-heart"></i>
+                    Donasi Sekarang
+                </button>
+
+                <p class="donation-note">
+                    <i class="fas fa-shield-alt"></i>
+                    Transaksi aman & terenkripsi
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Jadi Relawan -->
+    <section class="volunteer-section" id="relawan">
+        <div class="container">
+            <div class="volunteer-grid">
+                <div class="volunteer-image" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800" alt="Relawan membantu">
+                    <div class="volunteer-badge">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <strong>500+</strong>
+                            <span>Relawan Aktif</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="volunteer-content" data-aos="fade-left">
+                    <h2>Ayo Gabung Jadi Relawan!</h2>
+                    <p class="volunteer-description">
+                        Tenagamu bisa membantu lebih banyak orang. Kami butuh relawan untuk distribusi bantuan, dokumentasi, dan promosi sosial.
+                    </p>
+                    
+                    <div class="volunteer-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pengalaman berharga membantu sesama</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sertifikat relawan resmi</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Komunitas positif & inspiratif</span>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fleksibel sesuai waktu luangmu</span>
+                        </div>
+                    </div>
+
+                    <a href="#volunteer-form" class="btn-volunteer">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        Daftar Relawan
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Dukung dengan Cara Lain -->
+    <section class="other-support-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Dukung dengan Cara Lain</h2>
+                <p>Ada banyak cara untuk berkontribusi, pilih yang paling sesuai denganmu</p>
+            </div>
+
+            <div class="support-cards-grid">
+                <!-- Card 1: Sebarkan Info -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="support-card-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Sebarkan Info</h3>
+                    <p>Bantu kami menjangkau lebih banyak orang dengan membagikan kampanye ke media sosialmu</p>
+                    <div class="share-buttons">
+                        <button class="share-btn whatsapp" title="Share ke WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </button>
+                        <button class="share-btn instagram" title="Share ke Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </button>
+                        <button class="share-btn twitter" title="Share ke Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="share-btn facebook" title="Share ke Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Bantu dengan Skill -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="support-card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Bantu dengan Skill</h3>
+                    <p>Punya keahlian desain, coding, atau konten? Kontribusimu sangat berharga untuk kami</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Desain Grafis</span>
+                        <span class="skill-tag">Web Development</span>
+                        <span class="skill-tag">Content Writing</span>
+                        <span class="skill-tag">Video Editing</span>
+                    </div>
+                    <a href="#contact" class="support-card-btn">Hubungi Kami</a>
+                </div>
+
+                <!-- Card 3: Jadi Partner -->
+                <div class="support-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="support-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Jadi Partner</h3>
+                    <p>Organisasi atau brand? Mari berkolaborasi untuk menciptakan dampak sosial yang lebih besar</p>
+                    <ul class="partner-benefits">
+                        <li><i class="fas fa-star"></i> CSR Partnership</li>
+                        <li><i class="fas fa-star"></i> Co-Branding Campaign</li>
+                        <li><i class="fas fa-star"></i> Employee Engagement</li>
+                    </ul>
+                    <a href="#partnership" class="support-card-btn">Ajukan Kerjasama</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Kepercayaan & Transparansi -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Kepercayaan & Transparansi</h2>
+                <p>Keamanan dan transparansi adalah prioritas utama kami</p>
+            </div>
+
+            <div class="trust-content">
+                <!-- Payment Partners -->
+                <div class="trust-block" data-aos="fade-up" data-aos-delay="0">
+                    <h3><i class="fas fa-credit-card"></i> Partner Pembayaran Terpercaya</h3>
+                    <div class="payment-logos">
+                        <div class="payment-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/200px-Logo_dana_blue.svg.png" alt="DANA">
+                        </div>
+                        <div class="payment-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/200px-Logo_ovo_purple.svg.png" alt="OVO">
+                        </div>
+                        <div class="payment-logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/200px-Gopay_logo.svg.png" alt="GoPay">
+                        </div>
+                        <div class="payment-logo">
+                            <span class="payment-text">BCA</span>
+                        </div>
+                        <div class="payment-logo">
+                            <span class="payment-text">Mandiri</span>
+                        </div>
+                        <div class="payment-logo">
+                            <span class="payment-text">BNI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security Badges -->
+                <div class="trust-block" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fas fa-shield-alt"></i> Keamanan Terjamin</h3>
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>SSL Encrypted</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Transaksi Aman</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Data Terlindungi</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-file-contract"></i>
+                            <span>Terdaftar Resmi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transparency Statement -->
+                <div class="trust-block transparency-statement" data-aos="fade-up" data-aos-delay="200">
+                    <div class="transparency-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="transparency-text">
+                        <h3>Komitmen Transparansi</h3>
+                        <p>"Semua donasi tercatat dengan rapi. Laporan keuangan akan dipublikasikan setiap bulan untuk memastikan akuntabilitas penuh kepada para donatur."</p>
+                        <a href="#reports" class="transparency-link">
+                            Lihat Laporan Keuangan <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Closing CTA Section -->
+    <section class="closing-cta">
+        <div class="closing-cta-bg"></div>
+        <div class="container closing-cta-content">
+            <h2 data-aos="fade-up">Setiap Dukungan Berarti.<br>Yuk, Jadi Bagian dari Perubahan Hari Ini.</h2>
+            <p data-aos="fade-up" data-aos-delay="100">
+                Bersama kita bisa membuat perbedaan nyata dalam kehidupan mereka yang membutuhkan
+            </p>
+            <a href="#donasi" class="btn-closing-cta" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-gift"></i>
+                Donasi Sekarang
+            </a>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-row">
+                        <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="footer-logo-img">
+                        <div>
+                            <div class="footer-logo">Sehati</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Setiap donasi adalah langkah kecil menuju perubahan besar. Terima kasih telah menjadi bagian dari misi kami</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#about">Tentang Kami</a></li>
+                        <li><a href="telusuri-donasi.html">Telusuri Donasi</a></li>
+                        <li><a href="dukung-kami.html">Dukung Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Kontak</h4>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i>0812-3456-7890</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i>info@sehati.org</div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sehati No.123, Jakarta</span></div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p>Terima kabar program dan update penting dari kami.</p>
+                    <form class="newsletter-form" action="#" method="post" onsubmit="return false;">
+                        <input type="email" class="newsletter-input" placeholder="Alamat email Anda">
+                        <button class="newsletter-btn" aria-label="Subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <div class="copyright">&copy; 2025 Sehati. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Donate Button -->
+    <div class="mobile-sticky-donate">
+        <a href="#donasi" class="mobile-donate-btn">
+            <i class="fas fa-gift"></i>
+            Donasi Sekarang
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/script.js"></script>
+    <script src="dukung-kami.js"></script>
+</body>
+</html>

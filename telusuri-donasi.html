@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telusuri Donasi - Sehati</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="logo-img">
+                <span class="navbar-logo-text">Sehati</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link active">Telusuri Donasi</a></li>
+                <li class="nav-item"><a href="dukung-kami.html" class="nav-link">Dukung Kami</a></li>
+                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
+                <div class="nav-auth">
+                    <a href="#login" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Masuk
+                    </a>
+                    <a href="#register" class="btn-auth btn-register">
+                        <i class="fas fa-user-plus"></i>
+                        Daftar
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+    </nav>
+
+    <!-- Header & Filter Section -->
+    <section class="campaign-hero">
+        <div class="campaign-hero-bg"></div>
+        <div class="campaign-hero-overlay"></div>
+        <div class="container campaign-hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-heart"></i>
+                <span>Bersama Kita Bisa Lebih</span>
+            </div>
+            <h1>Telusuri Campaign Donasi</h1>
+            <p>Temukan berbagai campaign yang membutuhkan bantuan Anda. Setiap kontribusi membawa perubahan nyata.</p>
+            
+            <!-- Stats Overview -->
+            <div class="campaign-stats-overview">
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                    <div class="stat-info">
+                        <strong>1,250+</strong>
+                        <span>Campaign Aktif</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-info">
+                        <strong>50,000+</strong>
+                        <span>Donatur Bergabung</span>
+                    </div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-icon"><i class="fas fa-coins"></i></div>
+                    <div class="stat-info">
+                        <strong>Rp 5M+</strong>
+                        <span>Dana Terkumpul</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filter & Search -->
+            <div class="filter-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cari campaign berdasarkan judul atau kategori...">
+                </div>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="category-pills">
+                <button class="pill active" data-category="all">
+                    <i class="fas fa-th"></i> Semua
+                </button>
+                <button class="pill" data-category="sosial">
+                    <i class="fas fa-hands-helping"></i> Sosial
+                </button>
+                <button class="pill" data-category="kesehatan">
+                    <i class="fas fa-heartbeat"></i> Kesehatan
+                </button>
+                <button class="pill" data-category="pendidikan">
+                    <i class="fas fa-graduation-cap"></i> Pendidikan
+                </button>
+                <button class="pill" data-category="bencana">
+                    <i class="fas fa-exclamation-triangle"></i> Bencana
+                </button>
+                <button class="pill" data-category="anak">
+                    <i class="fas fa-child"></i> Anak
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campaign List Section -->
+    <section class="donation-list">
+        <div class="container">
+            <div class="donation-grid">
+                
+                <!-- Card 1 -->
+                <div class="donation-card" data-category="sosial">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_9lwVmZ8jeLE.png" alt="Donasi Untuk Palestina">
+                        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
+                        <span class="card-urgent"><i class="fas fa-clock"></i> 23 Hari Lagi</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Tolong Bantu Korban Palestina💖</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <div class="profile-details">
+                                <span class="profile-name">Muhammad Asfar</span>
+                                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span class="progress-collected">Rp 12.500.000</span>
+                                <span class="progress-target">dari Rp 20.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="62.5"></div>
+                            </div>
+                            <div class="progress-meta">
+                                <span><i class="fas fa-users"></i> 856 Donatur</span>
+                                <span class="progress-percentage">62.5%</span>
+                            </div>
+                        </div>
+                        <a href="detail-campaign.html" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="donation-card" data-category="anak">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_t7mH90-qTBM.png" alt="Donasi untuk Anak Kelaparan">
+                        <span class="card-badge badge-anak"><i class="fas fa-child"></i> Anak</span>
+                        <span class="card-urgent"><i class="fas fa-clock"></i> 15 Hari Lagi</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Donasi Kepada Anak Yang Kelaparan</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <div class="profile-details">
+                                <span class="profile-name">Agus Iprasis</span>
+                                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span class="progress-collected">Rp 85.000.000</span>
+                                <span class="progress-target">dari Rp 100.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="85"></div>
+                            </div>
+                            <div class="progress-meta">
+                                <span><i class="fas fa-users"></i> 1,245 Donatur</span>
+                                <span class="progress-percentage">85%</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="donation-card" data-category="sosial">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_KRz74kJIvmM.png" alt="Donasi untuk Tunawisma">
+                        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mari Kita Tolong Orang Tunawisma Bersama</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <div class="profile-details">
+                                <span class="profile-name">Keluarga Bahagia</span>
+                                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span class="progress-collected">Rp 45.000.000</span>
+                                <span class="progress-target">dari Rp 75.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="60"></div>
+                            </div>
+                            <div class="progress-meta">
+                                <span><i class="fas fa-users"></i> 623 Donatur</span>
+                                <span class="progress-percentage">60%</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="donation-card" data-category="sosial">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_KGcrkhDsPPQ.png" alt="Donasi untuk panti jompo">
+                        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sumbangan Untuk Lansia di Panti Jompo</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Panti Asuhan Kasih</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 28.000.000</span>
+                                <span>Yang Dibutuhkan Rp 50.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="56"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="donation-card">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_I862k_Zcy9o.png" alt="Donasi untuk pembangunan sekolah">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bangun Sekolah di Desa Terpencil</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Erik Herdiawan</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 60.000.000</span>
+                                <span>Yang Dibutuhkan Rp 100.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="60"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="donation-card">
+                    <div class="card-image">
+                        <img src="/asset/unsplash_dJHJUZ55514.png" alt="Donasi Untuk Anak Panti Asuhan">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bantuan Untuk Anak Panti Asuhan</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Dion Saputra</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 35.000.000</span>
+                                <span>Yang Dibutuhkan Rp 70.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="50"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="donation-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80" alt="Bantuan Korban Banjir">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bantuan Darurat Korban Banjir</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Relawan Indonesia</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 40.000.000</span>
+                                <span>Yang Dibutuhkan Rp 80.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="50"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="donation-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=800&q=80" alt="Bantuan Operasi">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bantu Biaya Operasi Jantung Anak</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Keluarga Harapan</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 90.000.000</span>
+                                <span>Yang Dibutuhkan Rp 150.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="60"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="donation-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=800&q=80" alt="Beasiswa Pendidikan">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Beasiswa Pendidikan Anak Kurang Mampu</h3>
+                        <div class="card-profile">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
+                            <span class="profile-name">Yayasan Pendidikan</span>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-info">
+                                <span>Rp 25.000.000</span>
+                                <span>Yang Dibutuhkan Rp 50.000.000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-value" data-value="50"></div>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+                        <div class="card-actions">
+                            <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
+                            <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="#" class="btn btn-outline">Lihat Lebih Banyak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-row">
+                        <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="footer-logo-img">
+                        <div>
+                            <div class="footer-logo">Sehati</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Setiap donasi adalah langkah kecil menuju perubahan besar. Terima kasih telah menjadi bagian dari misi kami</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="index.html#about">Tentang Kami</a></li>
+                        <li><a href="telusuri-donasi.html">Telusuri Donasi</a></li>
+                        <li><a href="dukung-kami.html">Dukung Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Kontak</h4>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i>0812-3456-7890</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i>info@sehati.org</div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sehati No.123, Jakarta</span></div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p>Terima kabar program dan update penting dari kami.</p>
+                    <form class="newsletter-form" action="#" method="post" onsubmit="return false;">
+                        <input type="email" class="newsletter-input" placeholder="Alamat email Anda">
+                        <button class="newsletter-btn" aria-label="Subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <div class="copyright">&copy; 2025 Sehati. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+    <script src="telusuri-donasi.js"></script>
+</body>
+</html>

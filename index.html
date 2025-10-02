@@ -17,23 +17,37 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-transparent">
-        <div class="container navbar-container">
-            <div class="logo-row" style="display:flex;align-items:center;">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
                 <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="logo-img">
-                <span class="navbar-logo-text" style="font-family:'Caveat',cursive;font-size:2.3rem;font-weight:700;color:var(--primary);margin-left:0px;">Sehati</span>
-            </div>
-            <div class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+                <span class="navbar-logo-text">Sehati</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#home" class="nav-link">Beranda</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Tentang Kami</a></li>
-                <li class="nav-item"><a href="#donation" class="nav-link">Telusuri Donasi</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Dukung Kami</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Merch</a></li>
-                <li class="nav-item"><a href="#join-us" class="btn btn-primary">Gabung</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link">Telusuri Donasi</a></li>
+                <li class="nav-item"><a href="dukung-kami.html" class="nav-link">Dukung Kami</a></li>
+                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
+                <div class="nav-auth">
+                    <a href="#login" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Masuk
+                    </a>
+                    <a href="#register" class="btn-auth btn-register">
+                        <i class="fas fa-user-plus"></i>
+                        Daftar
+                    </a>
+                </div>
             </ul>
         </div>
+        <div class="mobile-menu-overlay"></div>
     </nav>
 
     <!-- Hero Section -->
@@ -103,26 +117,35 @@
             <div class="donation-grid">
                 <!-- Card 1 -->
 <!-- Card 1 -->
-<div class="donation-card">
+<div class="donation-card" data-category="sosial">
     <div class="card-image">
         <img src="/asset/unsplash_9lwVmZ8jeLE.png" alt="Donasi Untuk Palestina">
+        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
+        <span class="card-urgent"><i class="fas fa-clock"></i> 23 Hari Lagi</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Tolong Bantu Korban Palestina💖</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Muhammad Asfar</span>
+            <div class="profile-details">
+                <span class="profile-name">Muhammad Asfar</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 12.500.000</span>
-                <span>Yang Dibutuhkan Rp 20.000.000</span>
+                <span class="progress-collected">Rp 12.500.000</span>
+                <span class="progress-target">dari Rp 20.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="62.5"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 856 Donatur</span>
+                <span class="progress-percentage">62.5%</span>
+            </div>
         </div>
-        <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
+        <a href="detail-campaign.html" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
             <button class="action-btn"><i class="fas fa-share-alt"></i> Bagikan</button>
@@ -131,26 +154,34 @@
 </div>
 
 <!-- Card 2 -->
-<div class="donation-card">
+<div class="donation-card" data-category="anak">
     <div class="card-image">
         <img src="/asset/unsplash_t7mH90-qTBM.png" alt="Donasi untuk Anak Kelaparan">
+        <span class="card-badge badge-anak"><i class="fas fa-child"></i> Anak</span>
+        <span class="card-urgent"><i class="fas fa-clock"></i> 15 Hari Lagi</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Donasi Kepada Anak Yang Kelaparan</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Agus Iprasis</span>
+            <div class="profile-details">
+                <span class="profile-name">Agus Iprasis</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 85.000.000</span>
-                <span>Yang Dibutuhkan Rp 100.000.000</span>
+                <span class="progress-collected">Rp 85.000.000</span>
+                <span class="progress-target">dari Rp 100.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="85"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 1,245 Donatur</span>
+                <span class="progress-percentage">85%</span>
+            </div>
         </div>
-        <!-- TOMBOL DONASI DITAMBAHKAN DI SINI -->
         <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
@@ -160,26 +191,33 @@
 </div>
 
 <!-- Card 3 -->
-<div class="donation-card">
+<div class="donation-card" data-category="sosial">
     <div class="card-image">
         <img src="/asset/unsplash_KRz74kJIvmM.png" alt="Donasi untuk Tunawisma">
+        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Mari Kita Tolong Orang Tunawisma Bersama</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Keluarga Bahagia</span>
+            <div class="profile-details">
+                <span class="profile-name">Keluarga Bahagia</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 45.000.000</span>
-                <span>Yang Dibutuhkan Rp 75.000.000</span>
+                <span class="progress-collected">Rp 45.000.000</span>
+                <span class="progress-target">dari Rp 75.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="60"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 623 Donatur</span>
+                <span class="progress-percentage">60%</span>
+            </div>
         </div>
-        <!-- TOMBOL DONASI DITAMBAHKAN DI SINI -->
         <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
@@ -189,26 +227,33 @@
 </div>
 
 <!-- Card 4 -->
-<div class="donation-card">
+<div class="donation-card" data-category="sosial">
     <div class="card-image">
         <img src="/asset/unsplash_KGcrkhDsPPQ.png" alt="Donasi untuk panti jompo">
+        <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Sumbangan Untuk Lansia di Panti Jompo</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Panti Asuhan Kasih</span>
+            <div class="profile-details">
+                <span class="profile-name">Panti Asuhan Kasih</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 28.000.000</span>
-                <span>Yang Dibutuhkan Rp 50.000.000</span>
+                <span class="progress-collected">Rp 28.000.000</span>
+                <span class="progress-target">dari Rp 50.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="56"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 412 Donatur</span>
+                <span class="progress-percentage">56%</span>
+            </div>
         </div>
-        <!-- TOMBOL DONASI DITAMBAHKAN DI SINI -->
         <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
@@ -218,26 +263,33 @@
 </div>
 
 <!-- Card 5 -->
-<div class="donation-card">
+<div class="donation-card" data-category="pendidikan">
     <div class="card-image">
         <img src="/asset/unsplash_I862k_Zcy9o.png" alt="Donasi untuk pembangunan sekolah">
+        <span class="card-badge badge-pendidikan"><i class="fas fa-graduation-cap"></i> Pendidikan</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Bangun Sekolah di Desa Terpencil</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Erik Herdiawan</span>
+            <div class="profile-details">
+                <span class="profile-name">Erik Herdiawan</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 60.000.000</span>
-                <span>Yang Dibutuhkan Rp 100.000.000</span>
+                <span class="progress-collected">Rp 60.000.000</span>
+                <span class="progress-target">dari Rp 100.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="60"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 789 Donatur</span>
+                <span class="progress-percentage">60%</span>
+            </div>
         </div>
-        <!-- TOMBOL DONASI DITAMBAHKAN DI SINI -->
         <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
@@ -247,26 +299,33 @@
 </div>
 
 <!-- Card 6 -->
-<div class="donation-card">
+<div class="donation-card" data-category="anak">
     <div class="card-image">
         <img src="/asset/unsplash_dJHJUZ55514.png" alt="Donasi Untuk Anak Panti Asuhan">
+        <span class="card-badge badge-anak"><i class="fas fa-child"></i> Anak</span>
     </div>
     <div class="card-content">
         <h3 class="card-title">Bantuan Untuk Anak Panti Asuhan</h3>
         <div class="card-profile">
             <img src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?auto=format&fit=crop&w=200&q=80" alt="Profile" class="profile-img">
-            <span class="profile-name">Dion Saputra</span>
+            <div class="profile-details">
+                <span class="profile-name">Dion Saputra</span>
+                <span class="profile-verified"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+            </div>
         </div>
         <div class="progress-container">
             <div class="progress-info">
-                <span>Rp 35.000.000</span>
-                <span>Yang Dibutuhkan Rp 70.000.000</span>
+                <span class="progress-collected">Rp 35.000.000</span>
+                <span class="progress-target">dari Rp 70.000.000</span>
             </div>
             <div class="progress-bar">
                 <div class="progress-value" data-value="50"></div>
             </div>
+            <div class="progress-meta">
+                <span><i class="fas fa-users"></i> 534 Donatur</span>
+                <span class="progress-percentage">50%</span>
+            </div>
         </div>
-        <!-- TOMBOL DONASI DITAMBAHKAN DI SINI -->
         <a href="#" class="btn btn-primary btn-donate">Donasi Sekarang</a>
         <div class="card-actions">
             <button class="action-btn"><i class="far fa-heart"></i> Suka</button>
@@ -278,7 +337,7 @@
             </div>
             
             <div class="text-center">
-                <a href="#" class="btn btn-outline">Lihat Lebih Banyak</a>
+                <a href="telusuri-donasi.html" class="btn btn-outline">Lihat Lebih Banyak</a>
             </div>
             
             <div class="donation-actions">

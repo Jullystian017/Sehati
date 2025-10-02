@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tentang Kami - Sehati</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-transparent">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="logo-img">
+                <span class="navbar-logo-text">Sehati</span>
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link active">Tentang Kami</a></li>
+                <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link">Telusuri Donasi</a></li>
+                <li class="nav-item"><a href="dukung-kami.html" class="nav-link">Dukung Kami</a></li>
+                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
+                <div class="nav-auth">
+                    <a href="#login" class="btn-auth btn-login">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Masuk
+                    </a>
+                    <a href="#register" class="btn-auth btn-register">
+                        <i class="fas fa-user-plus"></i>
+                        Daftar
+                    </a>
+                </div>
+            </ul>
+        </div>
+        <div class="mobile-menu-overlay"></div>
+    </nav>
+
+    <!-- Content will be added here -->
     
+    <script src="/script.js"></script>
 </body>
 </html>

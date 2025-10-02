@@ -32,11 +32,18 @@
 
         // Navbar scroll effect
         const navbar = document.querySelector('.navbar');
+        const isTransparentNavbar = navbar.classList.contains('navbar-transparent');
+        
         function handleNavbarScroll() {
             if (window.scrollY > 40) {
                 navbar.classList.remove('navbar-transparent');
+                navbar.classList.add('navbar-scrolled');
             } else {
-                navbar.classList.add('navbar-transparent');
+                navbar.classList.remove('navbar-scrolled');
+                // Kembalikan navbar-transparent jika memang transparan di awal
+                if (isTransparentNavbar) {
+                    navbar.classList.add('navbar-transparent');
+                }
             }
         }
         window.addEventListener('scroll', handleNavbarScroll);
@@ -95,21 +102,23 @@
             
             // Check if stats section is in viewport
             const statsSection = document.querySelector('.stats');
-            const statsPosition = statsSection.getBoundingClientRect();
-            
-            // If stats section is in viewport, start counter animation
-            if (statsPosition.top < window.innerHeight && statsPosition.bottom >= 0) {
-                animateCounters();
-            } else {
-                // Listen for scroll event to trigger counter animation
-                window.addEventListener('scroll', () => {
-                    const scrollStatsPosition = statsSection.getBoundingClientRect();
-                    
-                    if (scrollStatsPosition.top < window.innerHeight && scrollStatsPosition.bottom >= 0) {
-                        animateCounters();
-                        window.removeEventListener('scroll', this);
-                    }
-                });
+            if (statsSection) {
+                const statsPosition = statsSection.getBoundingClientRect();
+                
+                // If stats section is in viewport, start counter animation
+                if (statsPosition.top < window.innerHeight && statsPosition.bottom >= 0) {
+                    animateCounters();
+                } else {
+                    // Listen for scroll event to trigger counter animation
+                    window.addEventListener('scroll', () => {
+                        const scrollStatsPosition = statsSection.getBoundingClientRect();
+                        
+                        if (scrollStatsPosition.top < window.innerHeight && scrollStatsPosition.bottom >= 0) {
+                            animateCounters();
+                            window.removeEventListener('scroll', this);
+                        }
+                    });
+                }
             }
         });
         
@@ -130,3 +139,58 @@
                 }
             });
         });
+
+        // Detail Campaign Progress Bar Animation
+        const progressFill = document.querySelector('.progress-fill');
+        if (progressFill) {
+            window.addEventListener('load', () => {
+                const progress = progressFill.getAttribute('data-progress');
+                setTimeout(() => {
+                    progressFill.style.width = progress + '%';
+                }, 300);
+            });
+        }
+
+        // Campaign Banner Slider
+        let currentSlideIndex = 1;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (!slides.length) return;
+            
+            if (n > slides.length) {
+                currentSlideIndex = 1;
+            }
+            if (n < 1) {
+                currentSlideIndex = slides.length;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentSlideIndex - 1].classList.add('active');
+            dots[currentSlideIndex - 1].classList.add('active');
+        }
+
+        function moveSlide(n) {
+            currentSlideIndex += n;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(n) {
+            currentSlideIndex = n;
+            showSlide(currentSlideIndex);
+        }
+
+        // Auto slide every 5 seconds
+        if (document.querySelector('.campaign-banner-slider')) {
+            setInterval(() => {
+                moveSlide(1);
+            }, 5000);
+        }
+
+        // Make functions global for onclick handlers
+        window.moveSlide = moveSlide;
+        window.currentSlide = currentSlide;
