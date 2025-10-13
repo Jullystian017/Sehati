@@ -13,10 +13,13 @@
     <!-- Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+        <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-transparent">
+<nav class="navbar navbar-transparent">
         <div class="navbar-container">
             <a href="index.html" class="navbar-logo">
                 <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="logo-img">
@@ -31,16 +34,15 @@
 
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
-                <li class="nav-item"><a href="index.html#about" class="nav-link active">Tentang Kami</a></li>
+                <li class="nav-item"><a href="tentang.html" class="nav-link active">Tentang Kami</a></li>
                 <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link">Telusuri Donasi</a></li>
                 <li class="nav-item"><a href="dukung-kami.html" class="nav-link">Dukung Kami</a></li>
-                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
                 <div class="nav-auth">
-                    <a href="#login" class="btn-auth btn-login">
+                    <a href="/login.html" class="btn-auth btn-login">
                         <i class="fas fa-sign-in-alt"></i>
                         Masuk
                     </a>
-                    <a href="#register" class="btn-auth btn-register">
+                    <a href="/login.html" class="btn-auth btn-register">
                         <i class="fas fa-user-plus"></i>
                         Daftar
                     </a>
@@ -50,8 +52,471 @@
         <div class="mobile-menu-overlay"></div>
     </nav>
 
-    <!-- Content will be added here -->
-    
+    <!-- Hero Section -->
+    <section class="support-hero">
+        <div class="support-hero-bg">
+            <div class="support-hero-overlay"></div>
+            <img src="/asset/joel-muniz-BErJJL_KsjA-unsplash.jpg" alt="Orang saling membantu" class="support-hero-image">
+        </div>
+        <div class="container support-hero-content">
+            <h1 class="support-hero-title" data-aos="fade-up">Kami adalah kumpulan jiwa yang percaya bahwa kebersamaan melahirkan kekuatan</h1>
+            <div class="support-hero-cta" data-aos="fade-up" data-aos-delay="200">
+                <a href="#donasi" class="btn-hero btn-hero-primary">
+                    Ketauhi Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- stat -->
+<section class="stats" style="position: relative;">
+    <div class="container">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">50.000+</div>
+                <div class="stat-text">Donatur Terdaftar</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2.500+</div>
+                <div class="stat-text">Kampanye Berhasil</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">Rp 25 M+</div>
+                <div class="stat-text">Dana Tersalurkan</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-text">Tingkat Kepuasan</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story Section -->
+    <section class="our-story">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right">
+                    <h2>Cerita Kami</h2>
+                    <p>
+                        Sehati didirikan pada tahun 2020 dengan misi sederhana namun kuat: 
+                        membuat donasi lebih mudah, transparan, dan berdampak. Kami percaya 
+                        bahwa setiap orang berhak mendapatkan bantuan, dan setiap orang 
+                        memiliki kemampuan untuk membantu.
+                    </p>
+                    <p>
+                        Melalui platform kami, ribuan donatur telah terhubung dengan 
+                        berbagai kampanye sosial, mulai dari bantuan kesehatan, pendidikan, 
+                        hingga penanganan bencana alam. Setiap donasi yang terkumpul 
+                        dikelola dengan transparansi penuh, memastikan bantuan tepat 
+                        sasaran.
+                    </p>
+                </div>
+                <div class="story-image" data-aos="fade-right">
+                    <img src="/asset/melanie-lim-nD3wunG16Fo-unsplash.jpg" alt="Tim Sehati">
+                </div>
+            </div>
+
+            <div class="reverse-story-grid" data-aos="fade-left">
+                <div class="story-content-reverse">
+                    <h2>Visi Dan Misi</h2>
+                    <h3>Visi Kami</h3>
+                    <p>Mewujudkan dunia yang penuh kepedulian, di mana setiap donasi menjadi cahaya harapan, dan setiap kebaikan kecil mampu melahirkan perubahan besar bagi mereka yang membutuhkan.</p>
+                    <h3 class="down">Misi Kami</h3>
+                    <p class="down">Misi kami adalah menjadi jembatan antara hati yang peduli dengan mereka yang membutuhkan, membangun budaya berbagi yang tumbuh di tengah masyarakat, serta memastikan setiap donasi tersalurkan dengan aman, transparan, dan tepat sasaran. Kami berkomitmen untuk menghadirkan gerakan donasi yang berkelanjutan, menghadirkan solusi nyata, dan membuka kesempatan bagi siapa pun untuk ikut berkontribusi dalam menciptakan masa depan yang lebih baik.</p>
+                </div>
+                <div class="story-image">
+                    <img src="/asset/joel-muniz-3k3l2brxmwQ-unsplash.jpg" alt="Tim Sehati">
+                </div>
+            </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Nilai-Nilai Kami</h2>
+                <p>Prinsip yang menjadi pedoman dalam setiap langkah kami</p>
+            </div>
+            <div class="values-grid" data-aos="fade-up" data-aos-delay="300">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Transparansi</h3>
+                    <p>
+                        Setiap donasi dan penyaluran dana dilaporkan secara terbuka 
+                        dan dapat diakses oleh semua pihak.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Empati</h3>
+                    <p>
+                        Kami memahami kebutuhan penerima manfaat dan berkomitmen 
+                        memberikan bantuan yang tepat dan bermakna.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Kolaborasi</h3>
+                    <p>
+                        Kami percaya kekuatan kolaborasi dalam menciptakan 
+                        perubahan sosial yang lebih besar.
+                    </p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Inovasi</h3>
+                    <p>
+                        Terus berinovasi dalam teknologi dan metode untuk 
+                        meningkatkan efektivitas donasi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event -->
+<section class="event-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Acara Kami</h2>
+            <p>Bergabunglah dalam acara sosial kami dan buat perbedaan nyata</p>
+        </div>
+        
+        <div class="event-slider" data-aos="fade-up" data-aos-delay="100">
+            <div class="event-slider-container">
+                <div class="event-slider-track" id="eventSliderTrack">
+                    <!-- Slide 1 -->
+                    <div class="event-slide">
+                        <div class="event-card-slider">
+                            <div class="event-image-slider">
+                                <img src="/asset/tim-marshall-cAtzHUz7Z8g-unsplash.jpg" alt="Aksi Peduli Pendidikan">
+                            </div>
+                            <div class="event-content-slider">
+                                <h2>Bakti Sosial Pendidikan: Buku untuk Masa Depan</h2>
+                                
+                                <div class="event-details">
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>SDN 01 Ciputat, Tangerang Selatan</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sabtu, 15 Maret 2025</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Terbuka untuk Umum</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-hourglass-half"></i>
+                                        <span>Waktu Tersisa: <span class="countdown-timer">3 hari 11 jam 12 menit 1 detik</span></span>
+                                    </div>
+                                </div>
+                                    <div class="event-actions">
+                                        <a href="#" class="btn btn-primary">Gabung Sekarang</a>
+                                        <a href="#" class="btn btn-outline">Bagikan Acara</a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="event-slide">
+                        <div class="event-card-slider">
+                            <div class="event-image-slider">
+                                <img src="/asset/erika-giraud-7KhbREQPFD4-unsplash.jpg" alt="Kampanye Kesehatan Masyarakat">
+                            </div>
+                            <div class="event-content-slider">
+                                <h2>Kampanye Kesehatan: Peduli Lingkungan Sehat</h2>
+                                
+                                <div class="event-details">
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Kelurahan Kebon Jeruk, Jakarta Barat</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Minggu, 23 Maret 2025</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Terbuka untuk Umum</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-hourglass-half"></i>
+                                        <span>Waktu Tersisa: <span class="countdown-timer">3 hari 11 jam 12 menit 1 detik</span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="event-actions">
+                                    <a href="#" class="btn btn-primary">Gabung Sekarang</a>
+                                    <a href="#" class="btn btn-outline">Bagikan Acara</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3  -->
+                    <div class="event-slide">
+                        <div class="event-card-slider">
+                            <div class="event-image-slider">
+                                <img src="/asset/kylie-lugo-t0BavJY0M-U-unsplash.jpg" alt="Bantuan Bencana Alam">
+                            </div>
+                            <div class="event-content-slider">
+                                <h2>Relawan Bencana: Tanggap Darurat Banjir</h2>
+                                
+                                <div class="event-details">
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <span>Wilayah Terdampak Banjir Jakarta</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Sabtu, 30 Maret 2025</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Terbuka untuk Umum</span>
+                                    </div>
+                                    <div class="event-detail-item">
+                                        <i class="fas fa-hourglass-half"></i>
+                                        <span>Waktu Tersisa: <span class="countdown-timer">3 hari 11 jam 12 menit 1 detik</span></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="event-actions">
+                                    <a href="#" class="btn btn-primary">Gabung Sekarang</a>
+                                    <a href="#" class="btn btn-outline">Bagikan Acara</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation Controls -->
+            <div class="slider-nav">
+                <button class="slider-btn prev-btn" id="prevEvent">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="slider-dots" id="eventDots"></div>
+                <button class="slider-btn next-btn" id="nextEvent">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Parther -->
+<section class="partners-section">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Mitra Kami</h2>
+            <p>Bersama mitra terpercaya, kami memperluas dampak sosial</p>
+        </div>
+        <div class="partners-slider" data-aos="fade-up" data-aos-delay="100">
+            <div class="partners-track">
+                <div class="partner-logo">
+                    <img src="/asset/Human-Initiative-Master-Logo.png" alt="Human Initiative">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/LAZISMUH.webp" alt="LAZISMUH">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo_BAZNAS_RI-Hijau-01.png" alt="BAZNAS">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg" alt="Kemensos">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/logo_WHO.png" alt="WHO">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo-Filantropi.png" alt="Filantropi Indonesia">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo-web-dd-hijau.png" alt="Dompet Dhuafa">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/rumahzakat.webp" alt="Rumah Zakat">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/UNHCR.svg.png" alt="UNHCR">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/UNICEF_Logo.png" alt="UNICEF">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/World_Food_Programme_Logo_Simple.svg.png" alt="World Food Programme">
+                </div>
+                
+                <!--  loop -->
+                <div class="partner-logo">
+                    <img src="/asset/Human-Initiative-Master-Logo.png" alt="Human Initiative">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/LAZISMUH.webp" alt="LAZISMUH">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo_BAZNAS_RI-Hijau-01.png" alt="BAZNAS">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo_of_the_Ministry_of_Social_Affairs_of_the_Republic_of_Indonesia.svg" alt="Kemensos">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/logo_WHO.png" alt="WHO">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo-Filantropi.png" alt="Filantropi Indonesia">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/Logo-web-dd-hijau.png" alt="Dompet Dhuafa">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/rumahzakat.webp" alt="Rumah Zakat">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/UNHCR.svg.png" alt="UNHCR">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/UNICEF_Logo.png" alt="UNICEF">
+                </div>
+                <div class="partner-logo">
+                    <img src="/asset/World_Food_Programme_Logo_Simple.svg.png" alt="World Food Programme">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-top">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-row">
+                        <img src="/asset/Sehati Logo.png" alt="Sehati Logo" class="footer-logo-img">
+                        <div>
+                            <div class="footer-logo">Sehati</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Setiap donasi adalah langkah kecil menuju perubahan besar. Terima kasih telah menjadi bagian dari misi kami</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="telusuri-donasi.html">Telusuri Donasi</a></li>
+                        <li><a href="dukung-kami.html">Dukung Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4 class="footer-title">Kontak</h4>
+                    <div class="contact-item"><i class="fas fa-phone-alt"></i>0812-3456-7890</div>
+                    <div class="contact-item"><i class="fas fa-envelope"></i>info@sehati.org</div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Jl. Raya Sehati No.123, Jakarta</span></div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p>Terima kabar program dan update penting dari kami.</p>
+                    <form class="newsletter-form" action="#" method="post" onsubmit="return false;">
+                        <input type="email" class="newsletter-input" placeholder="Alamat email Anda">
+                        <button class="newsletter-btn" aria-label="Subscribe">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <div class="copyright">&copy; 2025 Sehati. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Countdown Timer
+        function startCountdown() {
+            // Set initial time (3 days, 11 hours, 12 minutes, 1 second)
+            let days = 3;
+            let hours = 11;
+            let minutes = 12;
+            let seconds = 1;
+            
+            // Function to update countdown display
+            function updateCountdown() {
+                // Format the time
+                const countdownText = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+                
+                // Update all countdown elements
+                document.querySelectorAll('.countdown-timer').forEach(element => {
+                    element.textContent = countdownText;
+                });
+                
+                // Decrement time
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                        if (hours < 0) {
+                            hours = 23;
+                            days--;
+                            if (days < 0) {
+                                // Countdown finished
+                                clearInterval(countdownInterval);
+                                document.querySelectorAll('.countdown-timer').forEach(element => {
+                                    element.textContent = "Acara telah dimulai!";
+                                });
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Initial update
+            updateCountdown();
+            
+            // Update every second
+            const countdownInterval = setInterval(updateCountdown, 1000);
+        }
+        
+        // Start countdown when page loads
+        document.addEventListener('DOMContentLoaded', startCountdown);
+    </script>
 </body>
 </html>

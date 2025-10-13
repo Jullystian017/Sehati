@@ -194,3 +194,118 @@
         // Make functions global for onclick handlers
         window.moveSlide = moveSlide;
         window.currentSlide = currentSlide;
+
+        // Event Slider Functionality
+function initEventSlider() {
+    const track = document.getElementById('eventSliderTrack');
+    const slides = document.querySelectorAll('.event-slide');
+    const prevBtn = document.getElementById('prevEvent');
+    const nextBtn = document.getElementById('nextEvent');
+    const dotsContainer = document.getElementById('eventDots');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('slider-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.slider-dot');
+    
+    function updateSlider() {
+        track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+        
+        // Update button states
+        prevBtn.disabled = currentSlide === 0;
+        nextBtn.disabled = currentSlide === totalSlides - 1;
+    }
+    
+    function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+    }
+    
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlider();
+        }
+    }
+    
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlider();
+        }
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+    
+    // Initialize slider
+    updateSlider();
+}
+
+// Initialize event slider when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initEventSlider();
+    
+    // Your existing countdown code here...
+    function startCountdown() {
+        let days = 3;
+        let hours = 11;
+        let minutes = 12;
+        let seconds = 1;
+        
+        function updateCountdown() {
+            const countdownText = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+            
+            document.querySelectorAll('.countdown-timer').forEach(element => {
+                element.textContent = countdownText;
+            });
+            
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                    if (hours < 0) {
+                        hours = 23;
+                        days--;
+                        if (days < 0) {
+                            clearInterval(countdownInterval);
+                            document.querySelectorAll('.countdown-timer').forEach(element => {
+                                element.textContent = "Acara telah dimulai!";
+                            });
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+        
+        updateCountdown();
+        const countdownInterval = setInterval(updateCountdown, 1000);
+    }
+    
+    startCountdown();
+});

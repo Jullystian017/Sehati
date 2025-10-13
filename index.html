@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sehati - Website Donasi</title>
+    <link rel="icon" type="image/x-icon" href="/asset/Sehati Logo.png" width="50">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,9 @@
     <!-- Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
@@ -31,16 +35,15 @@
 
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Beranda</a></li>
-                <li class="nav-item"><a href="index.html#about" class="nav-link">Tentang Kami</a></li>
+                <li class="nav-item"><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
                 <li class="nav-item"><a href="telusuri-donasi.html" class="nav-link">Telusuri Donasi</a></li>
                 <li class="nav-item"><a href="dukung-kami.html" class="nav-link">Dukung Kami</a></li>
-                <li class="nav-item"><a href="#merch" class="nav-link">Merch</a></li>
                 <div class="nav-auth">
-                    <a href="#login" class="btn-auth btn-login">
+                    <a href="/login.html" class="btn-auth btn-login">
                         <i class="fas fa-sign-in-alt"></i>
                         Masuk
                     </a>
-                    <a href="#register" class="btn-auth btn-register">
+                    <a href="/login.html" class="btn-auth btn-register">
                         <i class="fas fa-user-plus"></i>
                         Daftar
                     </a>
@@ -53,15 +56,15 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
-        <div class="container hero-content">
-            <h1>Mari Bersatu Hati Menguatkan Harapan</h1>
-            <p>Sehati hadir sebagai platform donasi untuk membantu saudara saudara kita yang membutuhkan uluran tangan. Bersama kita bisa membuat perubahan.</p>
-            <a href="#" class="btn btn-primary">Donasi Sekarang</a>
+        <div class="container hero-content" data-aos="fade-up" data-aos-delay="100">
+            <h1 data-aos="fade-up" data-aos-delay="200">Mari Bersatu Hati Menguatkan Harapan</h1>
+            <p data-aos="fade-up" data-aos-delay="300">Sehati hadir sebagai platform donasi untuk membantu saudara saudara kita yang membutuhkan uluran tangan. Bersama kita bisa membuat perubahan.</p>
+            <a href="/telusuri-donasi.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">Donasi Sekarang</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="about" data-aos="fade-right">
         <div class="container about-container">
             <div class="about-images">
                 <div class="main-image">
@@ -73,7 +76,7 @@
                 <span class="welcome-text">Welcome to Sehati</span>
                 <h2>Ubah Kehidupan Dengan, Satu Donasimu</h2>
                 <p>Satu tindakan kecil bisa menjadi titik balik besar.Dengan satu donasi, kamu bukan hanya memberi kamu mengubah. Mengubah lapar menjadi kenyang.Mengubah gelap menjadi harapan. Mengubah mimpi menjadi kenyataan.</p>
-                <a href="#" class="btn btn-primary">Kenal Kami Yuk</a>
+                <a href="/tentang.html" class="btn btn-primary">Kenal Kami Yuk</a>
             </div>
         </div>
     </section>
@@ -81,19 +84,19 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="container stats-container">
-            <div class="stat-item">
+            <div class="stat-item" data-aos="fade-up" >
                 <div class="stat-number" >250+</div>
                 <div class="stat-text">Relawan Yang Bekerja Dari Seluruh Daerah</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
                 <div class="stat-number" >120+</div>
                 <div class="stat-text">Kampanye Yang Berhasil</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
                 <div class="stat-number">350+</div>
                 <div class="stat-text">Donasi Yang Berhasil</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="stat-number">50+</div>
                 <div class="stat-text" id="p">Team Dan Organisasi Yang Mendukung</div>
             </div>
@@ -103,21 +106,20 @@
     <!-- Donation List Section -->
     <section class="donation-list" id="donation">
         <div class="container">
-            <h2 class="text-center">Ayo Bantu Mereka yang Membutuhkan</h2>
+            <h2 class="text-center" data-aos="fade-up">Ayo Bantu Mereka yang Membutuhkan</h2>
             <div class="categories">
-                <div class="category active">Semua</div>
-                <div class="category">Anak</div>
-                <div class="category">Tunawisma</div>
-                <div class="category">Bencana</div>
-                <div class="category">Pengobatan</div>
-                <div class="category">Kebutuhan</div>
-                <div class="category">Wafat</div>
+                <div class="category active" data-aos="fade-up" data-aos-delay="100">Semua</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="200">Anak</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="300">Tunawisma</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="400">Bencana</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="500">Pengobatan</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="600">Kebutuhan</div>
+                <div class="category" data-aos="fade-up" data-aos-delay="700">Wafat</div>
             </div>
             
             <div class="donation-grid">
-                <!-- Card 1 -->
 <!-- Card 1 -->
-<div class="donation-card" data-category="sosial">
+<div class="donation-card" data-category="sosial" data-aos="fade-up" data-aos-delay="100">
     <div class="card-image">
         <img src="/asset/unsplash_9lwVmZ8jeLE.png" alt="Donasi Untuk Palestina">
         <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
@@ -154,7 +156,7 @@
 </div>
 
 <!-- Card 2 -->
-<div class="donation-card" data-category="anak">
+<div class="donation-card" data-category="anak" data-aos="fade-up" data-aos-delay="200">
     <div class="card-image">
         <img src="/asset/unsplash_t7mH90-qTBM.png" alt="Donasi untuk Anak Kelaparan">
         <span class="card-badge badge-anak"><i class="fas fa-child"></i> Anak</span>
@@ -191,7 +193,7 @@
 </div>
 
 <!-- Card 3 -->
-<div class="donation-card" data-category="sosial">
+<div class="donation-card" data-category="sosial" data-aos="fade-up" data-aos-delay="300">
     <div class="card-image">
         <img src="/asset/unsplash_KRz74kJIvmM.png" alt="Donasi untuk Tunawisma">
         <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
@@ -227,7 +229,7 @@
 </div>
 
 <!-- Card 4 -->
-<div class="donation-card" data-category="sosial">
+<div class="donation-card" data-category="sosial" data-aos="fade-up" data-aos-delay="100">
     <div class="card-image">
         <img src="/asset/unsplash_KGcrkhDsPPQ.png" alt="Donasi untuk panti jompo">
         <span class="card-badge badge-sosial"><i class="fas fa-hands-helping"></i> Sosial</span>
@@ -263,7 +265,7 @@
 </div>
 
 <!-- Card 5 -->
-<div class="donation-card" data-category="pendidikan">
+<div class="donation-card" data-category="pendidikan" data-aos="fade-up" data-aos-delay="200">
     <div class="card-image">
         <img src="/asset/unsplash_I862k_Zcy9o.png" alt="Donasi untuk pembangunan sekolah">
         <span class="card-badge badge-pendidikan"><i class="fas fa-graduation-cap"></i> Pendidikan</span>
@@ -299,7 +301,7 @@
 </div>
 
 <!-- Card 6 -->
-<div class="donation-card" data-category="anak">
+<div class="donation-card" data-category="anak" data-aos="fade-up" data-aos-delay="300">
     <div class="card-image">
         <img src="/asset/unsplash_dJHJUZ55514.png" alt="Donasi Untuk Anak Panti Asuhan">
         <span class="card-badge badge-anak"><i class="fas fa-child"></i> Anak</span>
@@ -333,93 +335,109 @@
         </div>
     </div>
 </div>
-
             </div>
             
-            <div class="text-center">
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
                 <a href="telusuri-donasi.html" class="btn btn-outline">Lihat Lebih Banyak</a>
             </div>
             
             <div class="donation-actions">
-                <a href="#" class="btn btn-primary">Buat Kampanye</a>
-                <a href="#" class="btn btn-secondary">Bergabung Dengan Kami</a>
+                <a href="#" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Buat Kampanye</a>
+                <a href="#" class="btn btn-secondary" data-aos="fade-up" data-aos-delay="300">Bergabung Dengan Kami</a>
             </div>
         </div>
     </section>
 
-    <!-- Stories Section -->
-    <section class="stories">
-        <div class="container">
-            <h2 class="text-center">Sebuah Cerita Mereka</h2>
-            <p class="text-center">Dengan bantuan dan dukungan dari para donatur, banyak kehidupan yang telah berubah menjadi lebih baik.</p>
-            
-<div class="stories-grid">
-    <!-- Story Card 1 -->
-    <div class="story-card">
-        <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1170&q=80" alt="Cerita Zola">
-        </div>
-        <div class="story-content">
-            <h3 class="story-title">Hallo Aku Zola!</h3>
-            <p><strong>Kalian Adalah orang Hebat!</strong><br>
-            Semoga Tuhan memberkati kalian karna kalian telah mendonasikan makanan kepada saudara kami, aku tidak akan pernah...</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="story-footer">
-                <img src="asset/material-icon-theme_verified.png" alt="icon" class="story-icon">
-                <p>Rp 15.000.000 <span>Berhasil Didonasi</span></p>
-            </div>
-        </div>
+<!-- Stories Section -->
+<section class="stories">
+    <div class="container">
+        <h2 class="text-center" data-aos="fade-up" data-aos-delay="100">Sebuah Cerita Mereka</h2>
+        <p class="text-center" data-aos="fade-up" data-aos-delay="200">Dengan bantuan dan dukungan dari para donatur, banyak kehidupan yang telah berubah menjadi lebih baik.</p>
+        
+        <div class="stories-grid-compact">
+            <!-- Story Card 1 --> 
+            <div class="story-card-compact" data-aos="fade-up" data-aos-delay="100">
+                <div class="story-image-compact">
+                    <img src="/asset/zach-wear-QCOc5-_Eld0-unsplash.jpg" alt="Cerita Zola">
+                    <div class="story-overlay"></div>
+                </div>
+                <div class="story-content-compact">
+                    <div class="story-header">
+                        <h3 class="story-title-compact">Hallo Aku Zola!</h3>
+                    </div>
+                    <p class="story-text-compact"><strong>Kalian Adalah orang Hebat!</strong><br>
+                    Semoga Tuhan memberkati kalian karna kalian telah mendonasikan makanan kepada saudara kami, aku tidak akan pernah melupakan kebaikan kalian...</p>
+<div class="story-footer-compact">
+    <div class="donation-info-compact">
+        <p class="donation-amount-compact">Rp 15.000.000</p>
+        <p class="donation-label-compact">Berhasil Didonasi</p>
     </div>
-
-    <!-- Story Card 2 -->
-    <div class="story-card">
-        <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1170&q=80" alt="Cerita Ayana">
-        </div>
-        <div class="story-content">
-            <h3 class="story-title">Hallo Aku Ayana!</h3>
-            <p><strong>Terimah Kasih Pahlawan!</strong><br>
-            Terimah kasih atas sumbangannya, berkat kalian saya bisa membayar biaya obat untuk adik saya. Semoga kalian diberkati Tuhan atas kebaikan kalian</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="story-footer">
-                <img src="asset/material-icon-theme_verified.png" alt="icon" class="story-icon">
-                <p>Rp 30.000.000 <span>Berhasil Didonasi</span></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Story Card 3 -->
-    <div class="story-card">
-        <div class="story-image">
-            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1170&q=80" alt="Cerita Andriy">
-        </div>
-        <div class="story-content">
-            <h3 class="story-title">Hallo Aku Andriy!</h3>
-            <p><strong>Kalian Adalah orang Hebat!</strong><br>
-            Semoga Tuhan Memberkati kalian karna kalian telah mendonasikan makanan kepada saudara kami, aku tidak akan pernah...</p>
-            <a href="#" class="read-more">Read More</a>
-            <div class="story-footer">
-                <img src="asset/material-icon-theme_verified.png" alt="icon" class="story-icon">
-                <p>Rp 15.000.000 <span>Berhasil Didonasi</span></p>
-            </div>
-        </div>
-    </div>
+    <div class="story-footer-divider"></div> <!-- Garis pembatas -->
+    <a href="#" class="read-more-compact">Baca Selengkapnya →</a>
 </div>
+                </div>
+            </div>
 
-            
-            <div class="view-more">
-                <a href="#" class="btn btn-outline">Lihat Cerita Lainnya</a>
+            <!-- Story Card 2 -->
+            <div class="story-card-compact" data-aos="fade-up" data-aos-delay="200">
+                <div class="story-image-compact">
+                    <img src="/asset/syed-fahim-haider-KieeWEku0vk-unsplash.jpg" alt="Cerita Ayana">
+                    <div class="story-overlay"></div>
+                </div>
+                <div class="story-content-compact">
+                    <div class="story-header">
+                        <h3 class="story-title-compact">Hallo Aku Ayana!</h3>
+                    </div>
+                    <p class="story-text-compact"><strong>Terimah Kasih Pahlawan!</strong><br>
+                    Terimah kasih atas sumbangannya, berkat kalian saya bisa membayar biaya obat untuk adik saya. Semoga kalian diberkati Tuhan...</p>
+<div class="story-footer-compact">
+    <div class="donation-info-compact">
+        <p class="donation-amount-compact">Rp 15.000.000</p>
+        <p class="donation-label-compact">Berhasil Didonasi</p>
+    </div>
+    <div class="story-footer-divider"></div> <!-- Garis pembatas -->
+    <a href="#" class="read-more-compact">Baca Selengkapnya →</a>
+</div>
+                </div>
+            </div>
+
+            <!-- Story Card 3 -->
+            <div class="story-card-compact" data-aos="fade-up" data-aos-delay="300">
+                <div class="story-image-compact">
+                    <img src="/asset/bennett-tobias-tqwOJAvUIh4-unsplash.jpg" alt="Cerita Andriy">
+                    <div class="story-overlay"></div>
+                </div>
+                <div class="story-content-compact">
+                    <div class="story-header">
+                        <h3 class="story-title-compact">Hallo Aku Andriy!</h3>
+                    </div>
+                    <p class="story-text-compact"><strong>Kami Sangat Berterima Kasih!</strong><br>
+                    Berkat donasi dari Sehati, sekolah kami bisa membangun ruang kelas baru. Sekarang anak-anak bisa belajar dengan nyaman dan aman...</p>
+<div class="story-footer-compact">
+    <div class="donation-info-compact">
+        <p class="donation-amount-compact">Rp 15.000.000</p>
+        <p class="donation-label-compact">Berhasil Didonasi</p>
+    </div>
+    <div class="story-footer-divider"></div> <!-- Garis pembatas -->
+    <a href="#" class="read-more-compact">Baca Selengkapnya →</a>
+</div>
+                </div>
             </div>
         </div>
-    </section>
+        
+        <div class="view-more-compact" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" class="btn btn-primary">Lihat Lebih Banyak Cerita</a>
+        </div>
+    </div>
+</section>
 
     <!-- How It Works Section -->
     <section class="how-it-works">
         <div class="container">
-            <h2 class="text-center">Cara Kerja Donasi Kami</h2>
-            <p class="text-center">Kami memastikan proses donasi berjalan dengan mudah, transparan, dan tepat sasaran.</p>
+            <h2 class="text-center" data-aos="fade-up" data-aos-delay="100">Cara Kerja Donasi Kami</h2>
+            <p class="text-center" style="margin-left: 25px;" data-aos="fade-up" data-aos-delay="200">Kami memastikan proses donasi berjalan dengan mudah, transparan, dan tepat sasaran.</p>
             
-            <div class="steps">
+            <div class="steps" data-aos="fade-up" data-aos-delay="300">
                 <!-- Step 1 -->
                 <div class="step">
                     <div class="step-icon">
@@ -454,12 +472,12 @@
     <section class="join-us" id="join-us">
         <div class="container join-container">
             <div class="join-content">
-                <h2>Ayo Menjadi Bagian Dari Kami Dan Membantu Sesama Yang Membutuhkan</h2>
-                <p>Mari bergandengan tangan, menjadi bagian dari gerakan kebaikan, dan hadir untuk mereka yang membutuhkan uluran tangan.</p>
-                <a href="#" class="btn btn-third">Gabung Sekarang</a>
+                <h2  data-aos="fade-up"  data-aos-delay="100">Ayo Menjadi Bagian Dari Kami Dan Membantu Sesama Yang Membutuhkan</h2>
+                <p data-aos="fade-up"  data-aos-delay="200">Mari bergandengan tangan, menjadi bagian dari gerakan kebaikan, dan hadir untuk mereka yang membutuhkan uluran tangan.</p>
+                <a href="/telusuri-donasi.html" class="btn btn-third" data-aos="fade-up"  data-aos-delay="300">Gabung Sekarang</a>
             </div>
             <div class="join-image">
-                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Komunitas relawan">
+                <img src="/asset/premium_photo-1683140538884-07fb31428ca6.jpeg" alt="Komunitas relawan">
             </div>
         </div>
     </section>
@@ -521,6 +539,14 @@
         </div>
     </div>
 </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="/script.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+</script>
 </body>
 </html>
